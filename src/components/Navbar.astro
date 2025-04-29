@@ -2,10 +2,12 @@
 import Instagram from "./buttons/Instagram.astro";
 import Whatsapp from "./buttons/Whatsapp.astro";
 import Meta from "./buttons/Meta.astro";
+import LogoButton from "./buttons/LogoButton.astro";
 ---
 
 <aside>
     <div class="container_navbar" >
+        <LogoButton/>
         <div class="box_networks" >
             <Instagram/>
             <Meta/>
@@ -28,6 +30,7 @@ import Meta from "./buttons/Meta.astro";
         align-items: center;
         justify-content: left;
         width: 850px;
+        gap: 15px;
     }
     .box_networks{
         display: flex;

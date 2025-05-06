@@ -17,6 +17,7 @@ import Navbar from "./Navbar.astro";
 
 <style>
 	section{
+		overflow: hidden;
 		display: grid;
 		place-items: center;
 		gap: 10px;
@@ -68,7 +69,7 @@ import Navbar from "./Navbar.astro";
 	*/
 	@-webkit-keyframes tracking-in-contract {
 		0% {
-			letter-spacing: 0.5em;
+			letter-spacing: 0.2em;
 			opacity: 0;
 		}
 		40% {
@@ -81,7 +82,7 @@ import Navbar from "./Navbar.astro";
 	}
 	@keyframes tracking-in-contract {
 		0% {
-			letter-spacing: 0.5em;
+			letter-spacing: 0.2em;
 			opacity: 0;
 		}
 		40% {
@@ -92,5 +93,24 @@ import Navbar from "./Navbar.astro";
 			opacity: 1;
 		}
 	}
+
+	@media
+		(width < 700px){
+			.splash{
+				display: none;
+			}
+			.destapaciones{
+				padding-right: 0px;
+				font-size: 42px;
+			}
+			.davila_box{
+				flex-direction: column-reverse;
+				text-align: center;
+				align-items: center;
+				h1{
+					font-size:42px;
+				}
+			}
+		}
 
 </style>

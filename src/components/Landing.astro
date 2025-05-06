@@ -5,40 +5,48 @@ import Navbar from "./Navbar.astro";
 
 <section>
 	<Navbar/>
-	<img class="splash" src="./splash.webp" alt="">
-	<div class="box_destapaciones" >
-		<h1 class="destapaciones" >DESTAPACIONES</h1>
-	</div>
-	<div class="davila_box" >
-		<h2>PRESUPUESTO POR WHATSAPP Y AL INSTANTE</h2>
-		<h1>DAVILA</h1>
-	</div>
+	<span class="circle" />
+	<img class="splash" src="./splash.webp" alt="">	
+	<header>
+		<div class="box_destapaciones" >
+			<h1 class="destapaciones" >DESTAPACIONES</h1>
+		</div>
+		<div class="davila_box" >
+			<h2>PRESUPUESTO POR WHATSAPP Y AL INSTANTE</h2>
+			<h1>DAVILA</h1>
+		</div>
+	</header>
 </section>
 
 <style>
 	section{
-		overflow: hidden;
+		margin-top: 30px;
+		height: 100vh;
 		display: grid;
 		place-items: center;
-		gap: 10px;
+	}
+	header{
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 1000px;
 	}
 	.splash{
-		z-index: 0;
+		z-index: 1;
 		position: absolute;
 		width: 900px;
 		mask-image: linear-gradient(var(--secundary)10%,transparent);
 	}
 	.destapaciones{
-		z-index: 1;
 		font-size: 70px;
 		margin: 0;
 		padding-right: 290px;
-		letter-spacing: 5px;
 		-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 		animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	}
 	.davila_box{
-		z-index: 1;
 		display: flex;
 		text-align: right;
 		align-items: flex-start;
@@ -53,6 +61,17 @@ import Navbar from "./Navbar.astro";
 			-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 			animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 		}
+	}
+	.circle{
+		z-index: 0;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		transform: translate(-50%,-50%);
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background:radial-gradient(var(--sky-blue),transparent 70%) ;
 	}
 
 		/* ----------------------------------------------

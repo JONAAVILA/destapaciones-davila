@@ -1,0 +1,51 @@
+---
+---
+
+<section>
+    <div class="container_testimonies" >
+        <span class="circle" />
+        <img src="./splash-2.webp" alt="">
+        <div class="box_testimonies_rigth" >
+            <div>
+                <h5>ARIEL W.</h5>
+                <p>Excelente servicio y rápido.Me soluciono el problema un domingo.</p>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
+
+<style>
+    section{
+        margin-block: 80px;
+        display: grid;
+        place-items: center;
+        height: 90vh;
+    }
+    .container_testimonies{
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 900px;
+    }
+    .box_testimonies_rigth{
+        z-index: 10;
+    }
+    .circle{
+		z-index: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background:radial-gradient(var(--sky-blue),transparent 70%) ;
+	}
+    img{
+        width: 700px;
+        position: absolute;
+        mask-image: linear-gradient(var(--secundary)30%,transparent);
+    }
+</style>

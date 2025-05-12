@@ -6,13 +6,46 @@
         <span class="circle" />
         <img src="./splash-2.webp" alt="">
         <div class="box_testimonies_rigth" >
-            <div>
-                <h5>ARIEL W.</h5>
-                <p>Excelente servicio y rápido.Me soluciono el problema un domingo.</p>
-            </div>
+            <a 
+                href="https://g.co/kgs/AjpnBBu"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Testimonio de Usuario Google sobre Destapaciones Davila"
+            >
+                <h2>DANIEL GARCIA</h2>
+                <p>SERGIO UN FENÓMENO, DA GUSTO TRABAJAR CON GENTE SERIA Y RESPONSABLE, LO LLAMÉ POR PROBLEMA EN CASA (ES UN PH) Y TERMINÓ DESTAPANDO EL CAÑO PRINCIPAL COMPARTIDO CON LOS VECINOS QUE VA A LA CLOACA, UNA MARAVILLA, MUY SATISFECHO, ¡GRACIAS! ¡ABRAZO!</p>
+            </a>
+            <span>1</span>
         </div>
-        <div></div>
-        <div></div>
+        <div class="box_testimonies_left" >
+            <span>2</span>
+            <a 
+                href="https://g.co/kgs/otxjn7p"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Testimonio de Usuario Google sobre Destapaciones Davila"
+            >
+                <h2>LEONARDO LEVERONI</h2>
+                <p>
+                    LO LLAMÉ Y EN EL TRANSCURSO DE UNA HORA, LLEGÓ A CASA, TRABAJÓ Y SE FUE DE MANERA IMPECABLE.
+                    MUY DIRIGENTE, RESPONSABLE, ME ANIMO A DECIR EL MEJOR DE ZONA SUR.
+                    UNA SEMANA LUCHANDO CON AYSA PARA QUE ME DESTAPE LA CLOACA, UNA HORA TARDÓ EN SOLUCIONARLO Y QUERÍA BALDEAR.
+                    IMPECABLE, ALTAMENTE RECOMENDABLE.
+                </p>
+            </a>
+        </div>
+        <div class="box_testimonies_rigth" >
+            <a 
+                href="https://g.co/kgs/gVzMFfx"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Testimonio de Usuario Google sobre Destapaciones Davila"
+            >
+                <h2>CECILIA MEDINA</h2>
+                <p>MUY CONFORME CON EL SERVICIO PRESTADO. LA VISITA FUE EN EL MISMO DÍA QUE LO LLAMÉ, RESOLVIÓ EL INCONVENIENTE DE MANERA EFICIENTE CON TODAS LAS HERRAMIENTAS NECESARIAS Y DEJANDO EL ESPACIO DE TRABAJO YA LIMPIO. EN TODO MOMENTO FUE SÚPER RESPONSABLE!</p>
+            </a>
+            <span>3</span>
+        </div>
     </div>
 </section>
 
@@ -21,7 +54,25 @@
         margin-block: 80px;
         display: grid;
         place-items: center;
-        height: 90vh;
+
+    }
+    a{
+        text-decoration: none;
+        color: var(--secundary);
+        width: 500px;
+    }
+    span{
+        font-size: 130px;
+        font-weight: 700;
+        color: var(--action);
+        line-height: 1;
+        margin: 0;
+    }
+    p{
+        font-size: 11px;
+    }
+    h2{
+        font-size: 15px;
     }
     .container_testimonies{
         position: relative;
@@ -31,6 +82,15 @@
     }
     .box_testimonies_rigth{
         z-index: 10;
+        display: flex;
+        align-items: center;
+        padding-left: 200px;
+    }
+    .box_testimonies_left{
+        padding-right: 200px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
     }
     .circle{
 		z-index: 0;
@@ -38,14 +98,15 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%);
-		width: 400px;
-		height: 400px;
+		width: 500px;
+		height: 500px;
 		border-radius: 50%;
 		background:radial-gradient(var(--sky-blue),transparent 70%) ;
 	}
     img{
-        width: 700px;
+        width: 900px;
         position: absolute;
-        mask-image: linear-gradient(var(--secundary)30%,transparent);
+        bottom:-80px;
+        mask-image: linear-gradient(var(--secundary)10%,transparent);
     }
 </style>

@@ -7,9 +7,7 @@ import Send from "./icons/Send.astro";
 <section>
     <div class="container_info" >
         <div class="box_image_info" >
-            <div class="box_image" >
-                <img src="./Destapaciones-Davila-Maquinaria.webp" alt="">
-            </div>
+            <picture/>
             <div class="box_info" >
                 <Arrow/>
                 <h5>UNICOS CON EQUIPOS ESPECIALIZADOS EN ZONA SUR</h5>
@@ -48,30 +46,27 @@ import Send from "./icons/Send.astro";
         flex-direction: column;
         align-items: flex-start;
     }
-    .box_image{
+    picture{
         position: relative;
         z-index: 1;
         display: flex;
         width: 400px;
         height: 190px;
+        margin-right: 15px;
         margin-bottom: -50px;
-    }
-    .box_image::after{
-        z-index: 0;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 110%;
         background: url('./Destapaciones-Davila-Maquinaria.webp');
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
-        filter: blur(8px);
     }
-    img{
-        z-index: 2;
-        width: 100%;
-        height: 100%;
+    picture::after{
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: -5px;
+        width: 105%;
+        height: 105%;
+        background: inherit;
+        backdrop-filter: blur(5px);
     }
     .box_button_info{
         display: grid;

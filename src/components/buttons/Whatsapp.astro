@@ -2,21 +2,94 @@
 ---
 
 <a href="">
-    <svg
-        width="24"  
-        height="24"  
-        viewBox="0 0 24 24"  
-        fill="none"  
-        stroke="currentColor"  
-    >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-    </svg>
+    <div class="box_text_whatsapp" >
+        <p>CONSULTANOS POR WHATSAPP</p>
+        <p>PRESUPUESTOS EN EL ACTO</p>
+    </div>
+    <div class="box_icon_whatsapp" >
+        <svg
+            width="30"  
+            height="30"  
+            viewBox="0 0 24 24"  
+            fill="none"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+        </svg>
+    </div>
 </a>
 
 <style>
+    a{
+        z-index: 10;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        right: 50%;
+        top: 500px;
+        transform: translateX(600px);
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 160px;
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 10px;
+        background-color: var(--action);
+        gap: 10px;
+        overflow: hidden;
+        transition: all ease-in-out 300ms;
+    }
+    a:hover:before{
+        z-index: 10;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150px;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent
+        );
+        animation: shimmer 1.5s infinite;
+    }
+    .box_text_whatsapp{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 30px;
+        transition: all ease-in-out 300ms;
+    }
+    a:hover{
+        width: 200px;
+    }
+    p{
+        margin: 0;
+        width: 150px;
+    }
+    .box_icon_whatsapp{
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+    }
     svg{
         stroke-width: 2px;
+        stroke: var(--primary);
     }
+
+    @keyframes shimmer {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(450px);
+    }
+}
 </style>

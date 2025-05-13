@@ -1,4 +1,5 @@
 ---
+import Instagram from "./buttons/Instagram.astro";
 import FormReact from "./react/FormReact";
 ---
 
@@ -7,8 +8,16 @@ import FormReact from "./react/FormReact";
     <div class="box_form_contact" >
         <FormReact client:only="react" />
         <div>
-            <h1>CONTÁCTANOS</h1>
-            <p>DEJANOS TU CONSULTA, PRESUPUESTAMOS EN EL ACTO Y SIN COMPLICACIONES</p>
+            <header>
+                <h1>CONTÁCTANOS</h1>
+                <p>DEJANOS TU CONSULTA, PRESUPUESTAMOS EN EL ACTO Y SIN COMPLICACIONES</p>
+            </header>
+            <div>
+                <div>
+                    <Instagram/>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </section>

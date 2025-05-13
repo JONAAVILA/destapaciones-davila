@@ -3,18 +3,20 @@ import FormReact from "./react/FormReact";
 ---
 
 <section>
+    <img src="./splash-3.webp" alt="">
     <div class="box_form_contact" >
         <FormReact client:only="react" />
         <div>
             <h1>CONTÁCTANOS</h1>
-            <h2>DEJANOS TU CONSULTA, PRESUPUESTAMOS EN EL ACTO Y SIN COMPLICACIONES</h2>
+            <p>DEJANOS TU CONSULTA, PRESUPUESTAMOS EN EL ACTO Y SIN COMPLICACIONES</p>
         </div>
     </div>
 </section>
 
 <style>
     section{
-        margin-top: 100px;
+        position: relative;
+        margin-top: 50px;
         display: grid;
         place-items: center;
     }
@@ -24,15 +26,22 @@ import FormReact from "./react/FormReact";
         justify-content: center;
         width: 800px;
         padding-block: 50px;
-        gap: 20px;
+        gap: 30px;
     }
     h1{
         font-size: 40px;
+        letter-spacing: 5px;
         margin: 0;
     }
-    h2{
+    p{
         font-size: 11px;
         text-wrap: balance;
         margin: 0;
+    }
+    img{
+        position: absolute;
+        width: 850px;
+        bottom: 0;
+        mask-image: linear-gradient(var(--secundary)80%,transparent);
     }
 </style>

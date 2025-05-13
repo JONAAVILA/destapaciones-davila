@@ -6,6 +6,7 @@ import './formReact.css'
 const FormReact = ()=>{
     return(
         <div className='container_form' >
+            <span className='circle_form' />
             <Formik
                 initialValues={{
                     name:'',
@@ -27,42 +28,49 @@ const FormReact = ()=>{
                 {
                     ()=>(
                         <Form className='form_react' >
-                            <Field
-                                type='text'
-                                name='name'
-                                placeholder='NOMBRE'
-                                className='input_form'
-                            />
-                            <div className='box_errors' >
-                                <ErrorMessage name='name' component='div' />
+                            <div>
+                                <Field
+                                    type='text'
+                                    name='name'
+                                    placeholder='NOMBRE'
+                                    className='input_form'
+                                />
+                                <div className='box_errors' >
+                                    <ErrorMessage name='name' component='div' />
+                                </div>
+                                <Field
+                                    type='text'
+                                    name='phone'
+                                    placeholder='TELÉFONO'
+                                    className='input_form'
+                                />
+                                <div className='box_errors' >
+                                    <ErrorMessage name='phone' component='div' />
+                                </div>
+                                <Field
+                                    type='text'
+                                    name='email'
+                                    placeholder='EMAIL'
+                                    className='input_form'
+                                />
+                                <div className='box_errors' >
+                                    <ErrorMessage name='email' component='div' />
+                                </div>
+                                <textarea 
+                                    name="message" 
+                                    id="message"
+                                    placeholder='CONSULTA'
+                                    className='input_form'
+                                />
+                                <div className='box_errors' >
+                                    <ErrorMessage name='message' component='div' />
+                                </div>
                             </div>
-                            <Field
-                                type='text'
-                                name='phone'
-                                placeholder='TELÉFONO'
-                            />
-                            <div className='box_errors' >
-                                <ErrorMessage name='phone' component='div' />
+                            <div className='box_button_form' >
+                                <button type='submit' >
+                                    ENVIAR
+                                </button>
                             </div>
-                            <Field
-                                type='text'
-                                name='email'
-                                placeholder='EMAIL'
-                            />
-                            <div className='box_errors' >
-                                <ErrorMessage name='email' component='div' />
-                            </div>
-                            <Field
-                                type='text'
-                                name='message'
-                                placeholder='CONSULTA'
-                            />
-                            <div className='box_errors' >
-                                <ErrorMessage name='message' component='div' />
-                            </div>
-                            <button type='submit' >
-                                ENVIA
-                            </button>
                         </Form>
                     )
                 }

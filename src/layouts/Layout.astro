@@ -81,4 +81,13 @@ const { title } = Astro.props
 	textarea{
 		height: 100px;
 	}
+
+	@keyframes shimmer {
+		0% {
+		transform: translateX(0);
+		}
+		100% {
+		transform: translateX(450px);
+		}
+	}
 </style>

@@ -6,7 +6,9 @@ import LogoButton from "./buttons/LogoButton.astro";
 
 <aside>
     <div class="container_navbar" >
-        <LogoButton/>
+        <div>
+            <LogoButton/>
+        </div>
         <div class="box_networks" >
             <Instagram/>
             <Meta/>
@@ -33,12 +35,30 @@ import LogoButton from "./buttons/LogoButton.astro";
         gap: 15px;
     }
     .box_networks{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 4px 20px 2px 20px;
+        width: 120px;
+        height: 36px;
         border-radius: 30px;
-        gap: 20px;
+        gap: 25px;
         background-color: var(--action);
+        overflow: hidden;
+    }
+    .box_networks:hover::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120px;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent
+        );
+        animation: shimmer 1.5s infinite;
     }
 </style>

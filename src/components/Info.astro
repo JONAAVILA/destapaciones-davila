@@ -1,5 +1,6 @@
 ---
 import Arrow from "./icons/Arrow.astro";
+import Send from "./icons/Send.astro";
 
 ---
 
@@ -18,6 +19,7 @@ import Arrow from "./icons/Arrow.astro";
         <div class="box_button_info" >
             <button>
                 CONSULTA POR LLAMADA
+                <Send/>
             </button>
         </div>
     </div>
@@ -79,5 +81,12 @@ import Arrow from "./icons/Arrow.astro";
         justify-content: right;
         padding-top: 15px;
         padding-right: 70px;
+
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
     }
 </style>

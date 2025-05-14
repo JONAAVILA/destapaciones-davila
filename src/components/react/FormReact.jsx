@@ -1,10 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
+import { useState } from 'react'
 import { validateConsult } from '../../utils/schema'
 import { sendEmail } from '../../adapters/sendConsult'
-import './formReact.css'
 import Alert from './modal/Alert'
-import { useState } from 'react'
 import Loader from './loader/Loader'
+import './formReact.css'
 
 const FormReact = ()=>{
     const [alert,setAlert] = useState('')

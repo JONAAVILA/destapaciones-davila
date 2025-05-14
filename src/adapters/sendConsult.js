@@ -5,6 +5,7 @@ const { PUBLIC_SERVICE_ID, PUBLIC_TEMPLATE_ID, PUBLIC_PUBLIC_KEY } = import.meta
 export async function sendEmail(values) {
 
     const{ name,email,phone,message } = values
+    console.log('values:',name,email,phone,message)
 
     const templateParams = {
         from_name: `👋 ${name}`,
@@ -19,7 +20,8 @@ export async function sendEmail(values) {
             templateParams,
             PUBLIC_PUBLIC_KEY
         )
-        return res.data
+        console.log('res adap:',res)
+        return true
     } catch (error) {
         return error.message
     }

@@ -1,0 +1,26 @@
+.box_alert{
+    z-index: 10;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    color: var(--primary);
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 380px;
+    height: 100px;
+    background-color: var(--action);
+}
+.cross_alert{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    stroke: var(--primary);
+    stroke-width: 2px;
+    transition: all ease-in-out 300ms;
+}
+.cross_alert:hover{
+    transform: rotate(-45deg);
+}

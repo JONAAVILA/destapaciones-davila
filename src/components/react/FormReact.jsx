@@ -2,11 +2,23 @@ import { ErrorMessage, Field, Form, Formik } from 'formik'
 import { validateConsult } from '../../utils/schema'
 import { sendEmail } from '../../adapters/sendConsult'
 import './formReact.css'
+import Alert from './modal/Alert'
+import { useState } from 'react'
+import Loader from './loader/Loader'
 
 const FormReact = ()=>{
+    const [alert,setAlert] = useState('')
+    const [loader,setLoader] = useState(false)
+
+    const handleAlert = ()=>{
+        setAlert('')
+    }
+
     return(
         <div className='container_form' >
             <span className='circle_form' />
+            {alert && <Alert handleAlert={handleAlert} >{alert}</Alert>}
+            {loader && <Loader size={80} />}
             <Formik
                 initialValues={{
                     name:'',
@@ -15,12 +27,18 @@ const FormReact = ()=>{
                     message:''
                 }}
                 validationSchema={validateConsult}
-                    onSubmit={ async (values)=>{
+                    onSubmit={ async (values,actions)=>{
                         try {
+                            setLoader(!loader)
                             const res = await sendEmail(values)
-                            console.log(res)
+                            setLoader(false)
+                            actions.resetForm()
+                            if(res) setAlert(`En poco tiempo estaremos en contacto ${values.name} 🙌`) 
                         } catch (error) {
-                            console.log(error)
+                            setLoader(false)
+                            actions.resetForm()
+                            setAlert('Algo salio mal 🤷‍♂️')
+                            console.log('error',error)
                         }
                     }
                 }

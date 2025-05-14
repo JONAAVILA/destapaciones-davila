@@ -56,7 +56,8 @@ const FormReact = ()=>{
                                 <div className='box_errors' >
                                     <ErrorMessage name='email' component='div' />
                                 </div>
-                                <textarea 
+                                <Field 
+                                    as="textarea"
                                     name="message" 
                                     id="message"
                                     placeholder='CONSULTA'
@@ -67,7 +68,7 @@ const FormReact = ()=>{
                                 </div>
                             </div>
                             <div className='box_button_form' >
-                                <button type='submit' >
+                                <button className='button_form_react' type='submit' >
                                     ENVIAR
                                 </button>
                             </div>

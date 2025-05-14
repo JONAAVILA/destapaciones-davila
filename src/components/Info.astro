@@ -76,11 +76,28 @@ import Send from "./icons/Send.astro";
         padding-top: 15px;
         padding-right: 70px;
 
-        button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+    }
+    button{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        overflow: hidden;
+    }
+    button:hover::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120px;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent
+        );
+        animation: shimmer 1.5s infinite;
     }
 </style>

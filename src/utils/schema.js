@@ -15,8 +15,8 @@ export const validateConsult = Yup.object().shape({
         .email('Email invalido')    
         .required('El email es requerido'),
     message:Yup.string()
-        .min(10)
-        .max(300)
-        .matches(/^[a-zA-Z0-9\s]+$/,'Formato inválido')
+        .min(10,'Mensaje muy corto')
+        .max(300,'Mensaje muy largo')
+        .matches(/^[a-zA-Z0-9\s]+$/,'Formato inválido, solo letras y números')
         .required('El mensaje es requerido'),
 })

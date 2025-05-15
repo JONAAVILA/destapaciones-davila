@@ -1,20 +1,25 @@
 ---
 import Instagram from "./buttons/Instagram.astro";
 import FormReact from "./react/FormReact";
+import Meta from "./buttons/Meta.astro";
 ---
 
 <section>
     <img src="./splash-3.webp" alt="">
     <div class="box_form_contact" >
         <FormReact client:only="react" />
-        <div>
+        <div class="box_header" >
             <header>
                 <h1>CONTÁCTANOS</h1>
                 <p>DEJANOS TU CONSULTA, PRESUPUESTAMOS EN EL ACTO Y SIN COMPLICACIONES</p>
             </header>
-            <div>
+            <div class="container_networks" >
                 <div>
-                    <Instagram/>
+                    <Instagram color="black" />
+
+                </div>
+                <div>
+                    <Meta color="black" />
                 </div>
             </div>
         </div>
@@ -36,6 +41,9 @@ import FormReact from "./react/FormReact";
         padding-block: 50px;
         gap: 30px;
     }
+    .box_header{
+        z-index: 3;
+    }
     h1{
         font-size: 40px;
         letter-spacing: 5px;
@@ -51,5 +59,15 @@ import FormReact from "./react/FormReact";
         width: 850px;
         bottom: 0;
         mask-image: linear-gradient(var(--secundary)80%,transparent);
+    }
+    .container_networks{
+        display: grid;
+        align-items: center;
+        justify-content: left;
+        gap: 8px;
+    }
+    .container_networks > div{
+        display: flex;
+
     }
 </style>

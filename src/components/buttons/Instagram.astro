@@ -1,12 +1,19 @@
 ---
+const { color } = Astro.props
 ---
 
-<a href="">
+<a
+    rel="noreferrer"
+    target="_blank"
+    aria-label="Seguinos en Instagram, Destapaciones Davila"
+    href="https://www.instagram.com/destapacionesdavila/?locale=French"
+>
     <svg
         width="24"
         height="24"  
         viewBox="0 0 24 24"  
-        fill="none"  
+        fill="none"
+        class={color}
     >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
@@ -19,6 +26,11 @@
     svg{
         margin-top: 1px;
         stroke-width: 2px;
+    }
+    .black{
+        stroke: var(--secundary);
+    }
+    .white{
         stroke: var(--primary);
     }
 </style>

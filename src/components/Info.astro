@@ -100,4 +100,26 @@ import Send from "./icons/Send.astro";
         );
         animation: shimmer 1.5s infinite;
     }
+
+    @media
+        (width < 700px){
+            section{
+                width: 350px;
+            }
+            .container_info{
+                width: 350px;
+            }
+            .box_info{
+                width: 350px;
+            }
+            .box_button_info{
+                width: 350px;
+                align-items: center;
+                justify-content: center;
+                padding-right:0px ;
+            }
+            .box_image_info{
+                display: grid;
+            }
+        }
 </style>

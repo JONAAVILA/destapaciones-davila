@@ -8,6 +8,7 @@ import Navbar from "./Navbar.astro";
 	<Navbar/>
 	<span class="circle" />
 	<img class="splash" src="./splash.webp" alt="">	
+	<img class="splash-mobile" src="./splash-mobile.webp" alt="">	
 	<Whatsapp/>
 	<header>
 		<div class="box_destapaciones" >
@@ -43,6 +44,9 @@ import Navbar from "./Navbar.astro";
 		transform: translate(-50%,-50%);
 		width: 1100px;
 		mask-image: linear-gradient(var(--secundary)10%,transparent);
+	}
+	.splash-mobile{
+		display: none;
 	}
 	.box_destapaciones{
 		display: flex;
@@ -127,6 +131,9 @@ import Navbar from "./Navbar.astro";
 
 	@media
 		(width < 700px){
+			section{
+				width: 350px;
+			}
 			header{
 				width: 350px;
 				gap: 10px;
@@ -136,6 +143,16 @@ import Navbar from "./Navbar.astro";
 			}
 			.splash{
 				display: none;
+			}
+			.splash-mobile{
+				display: block;
+				z-index: 1;
+				position: absolute;
+				left: 50%;
+				top: 350px;
+				transform: translate(-50%,-50%);
+				width: 100%;
+				mask-image: linear-gradient(var(--secundary)10%,transparent);
 			}
 			.box_destapaciones{
 				justify-content: center;

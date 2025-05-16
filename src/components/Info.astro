@@ -15,10 +15,10 @@ import Send from "./icons/Send.astro";
             </div>
         </div>
         <div class="box_button_info" >
-            <button>
+            <a href="tel:+5491158595267" >
                 CONSULTA POR LLAMADA
                 <Send/>
-            </button>
+            </a>
         </div>
     </div>
 </section>
@@ -77,15 +77,23 @@ import Send from "./icons/Send.astro";
         padding-right: 70px;
 
     }
-    button{
+    a{
         position: relative;
-        display: flex;
+		display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
+		width: 220px;
+		height: 35px;
+		border-radius: 40px;
+		font-size: 12px;
+        text-decoration: none;
+		color: var(--primary);
+		background-color: var(--action);
+		border: none;
         overflow: hidden;
     }
-    button:hover::after{
+    a:hover::after{
         content: "";
         position: absolute;
         top: 0;

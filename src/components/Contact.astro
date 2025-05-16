@@ -2,6 +2,8 @@
 import Instagram from "./buttons/Instagram.astro";
 import FormReact from "./react/FormReact";
 import Meta from "./buttons/Meta.astro";
+import Call from "./icons/Call.astro";
+import Email from "./icons/Email.astro";
 ---
 
 <section>
@@ -16,10 +18,19 @@ import Meta from "./buttons/Meta.astro";
             <div class="container_networks" >
                 <div>
                     <Instagram color="black" />
-
+                    <p>@DESTAPACIONESDAVILA</p>
                 </div>
                 <div>
                     <Meta color="black" />
+                    <p>DESTAPACIONES.DAVILA</p>
+                </div>
+                <div>
+                    <Call/>
+                    <p>11 5859-5267</p>
+                </div>
+                <div>
+                    <Email/>
+                    <p>DESTAPACIONESDAVILA@HOTMAIL.COM</p>
                 </div>
             </div>
         </div>
@@ -58,16 +69,18 @@ import Meta from "./buttons/Meta.astro";
         position: absolute;
         width: 850px;
         bottom: 0;
-        mask-image: linear-gradient(var(--secundary)80%,transparent);
+        mask-image: linear-gradient(transparent,var(--primary) 80%);
     }
     .container_networks{
         display: grid;
         align-items: center;
         justify-content: left;
-        gap: 8px;
+        margin-top: 15px;
     }
     .container_networks > div{
         display: flex;
-
+        align-items: center;
+        height: 30px;
+        gap: 5px;
     }
 </style>

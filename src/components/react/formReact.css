@@ -74,3 +74,13 @@
     );
     animation: shimmer 1.5s infinite;
 }
+
+@media
+    (width < 700px){
+        .container_form{
+            width: 350px;
+        }
+        .circle_form{
+            width: 350px;
+        }
+    }

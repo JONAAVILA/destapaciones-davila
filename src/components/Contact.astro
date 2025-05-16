@@ -7,7 +7,8 @@ import Email from "./icons/Email.astro";
 ---
 
 <section>
-    <img src="./splash-3.webp" alt="">
+    <img class="splash_contact" src="splash-3.webp" alt="">
+    <img class="splash_mobile" src="splash-3-mobile.webp" alt="">
     <div class="box_form_contact" >
         <FormReact client:only="react" />
         <div class="box_header" >
@@ -65,11 +66,14 @@ import Email from "./icons/Email.astro";
         text-wrap: balance;
         margin: 0;
     }
-    img{
+    .splash_contact{
         position: absolute;
         width: 850px;
         bottom: 0;
         mask-image: linear-gradient(transparent,var(--primary) 80%);
+    }
+    .splash_mobile{
+        display: none;
     }
     .container_networks{
         display: grid;
@@ -89,11 +93,19 @@ import Email from "./icons/Email.astro";
             section{
                 width: 350px;
             }
+            .splash_contact{
+                display: none;
+            }
+            .splash_mobile{
+                display: grid;
+                position: absolute;
+                width: 350px;
+                left: 0px;
+                bottom: 0;
+                mask-image: linear-gradient(transparent,var(--primary) 80%);
+            }
             .box_form_contact{
                 flex-direction: column-reverse;
-                width: 350px;
-            }
-            img{
                 width: 350px;
             }
         }

@@ -4,7 +4,7 @@ import Meta from "./buttons/Meta.astro";
 import LogoButton from "./buttons/LogoButton.astro";
 ---
 
-<aside>
+<aside id="navbar" >
     <div class="container_navbar" >
         <div>
             <LogoButton/>
@@ -60,6 +60,9 @@ import LogoButton from "./buttons/LogoButton.astro";
             transparent
         );
         animation: shimmer 1.5s infinite;
+    }
+    .scrolled{
+        background: var(--primary);
     }
 
     @media

@@ -15,6 +15,18 @@ const { title } = Astro.props
 	</body>
 </html>
 
+<script>
+	const navbar = document.getElementById('navbar')
+
+	window.addEventListener('scroll',()=>{
+		if(window.scrollY > 10){
+			navbar?.classList.add('scrolled')
+		}else {
+			navbar?.classList.remove('scrolled')
+		}
+	})
+</script>
+
 <style is:global >
 	@font-face {
 		font-family: 'PlayFair';

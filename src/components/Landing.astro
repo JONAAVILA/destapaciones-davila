@@ -15,7 +15,10 @@ import Navbar from "./Navbar.astro";
 			<h1 class="destapaciones" >DESTAPACIONES</h1>
 		</div>
 		<div class="davila_box" >
-			<h2>PRESUPUESTO POR WHATSAPP Y AL INSTANTE</h2>
+			<div>
+				<h2>PRESUPUESTO POR WHATSAPP Y AL INSTANTE</h2>
+				<p>Realizamos Destapaciones de Cloacas, Destapaciones Pluviales, y Destapación de Desagüe de Cocina, Lavadero y Rejilla de Baño. También Destapación de Columna de Bajada de Desagüe. Atención las 24 hs, los 365 días del año, incluyendo Domingos y Feriados. ¡Siempre de Guardia!</p>
+			</div>
 			<h1>DAVILA</h1>
 		</div>
 	</header>
@@ -36,6 +39,10 @@ import Navbar from "./Navbar.astro";
 		justify-content: center;
 		width: 1000px;
 	}
+	p{
+		font-size: 12px;
+		margin: 0;
+	}
 	.splash{
 		z-index: 1;
 		position: absolute;
@@ -43,7 +50,7 @@ import Navbar from "./Navbar.astro";
 		top: 350px;
 		transform: translate(-50%,-50%);
 		width: 1100px;
-		mask-image: linear-gradient(var(--secundary)10%,transparent);
+		mask-image: linear-gradient(var(--secundary)8%,transparent);
 	}
 	.splash-mobile{
 		display: none;
